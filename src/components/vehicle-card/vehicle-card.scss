@@ -1,0 +1,45 @@
+.vehicle-card {
+  padding: 0.2em;
+  position: relative;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+
+  /* W/H ratio should be 1.629 */
+  width: 9.7746em;
+  height: 6em;
+
+  .type-and-level {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .vehicle-title {
+    position: absolute;
+    width: 90%;
+    margin: 0;
+    bottom: 0.2em;
+    right: 0.4em;
+    z-index: 2;
+    font-weight: 400;
+    font-size: 1em;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .vehicle-icon {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .vehicle-type-icon {
+    height: 2em;
+  }
+}

@@ -1,0 +1,8 @@
+.vehicle-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1em;
+  max-width: 1024px;
+  margin: 0 auto;
+}
