@@ -1,5 +1,5 @@
 import "./vehicle-card.scss";
-import { type Vehicle } from "../../utils/types";
+import { type Vehicle } from "../../utils/filter-logic";
 import { romanize } from "../../utils/helper-functions";
 
 const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {

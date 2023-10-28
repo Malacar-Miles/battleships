@@ -2,10 +2,13 @@
   padding: 0.2em;
   position: relative;
   cursor: pointer;
-  color: white;
   overflow: hidden;
+  border-radius: 5px;
+  border: 1px solid #2b2b2b;
+  background-color: #1f1f1f;
 
-  /* W/H ratio should be 1.629 */
+  /* W/H ratio should be 1.629
+  for flag icons to fit nicely */
   width: 9.7746em;
   height: 6em;
 

@@ -1,7 +1,18 @@
-export function romanize(number: number | undefined | null) {
-  if (number === undefined || number === null || isNaN(number)) return "";
+export function romanize(arabicNumber: number | undefined | null) {
+  // Convert an Arabic number into a Roman one
 
-  const roman = {
+  if (
+    arabicNumber === undefined ||
+    arabicNumber === null ||
+    isNaN(arabicNumber) ||
+    arabicNumber <= 0 ||
+    !Number.isInteger(arabicNumber)
+  ) {
+    console.log("Invalid number input in romanize function: ", arabicNumber);
+    return "";
+  }
+
+  const romanNumerals = {
     M: 1000,
     CM: 900,
     D: 500,
@@ -17,16 +28,16 @@ export function romanize(number: number | undefined | null) {
     I: 1,
   };
 
-  let ans = "";
-  while (number > 0) {
-    let a: keyof typeof roman;
-    for (a in roman) {
-      if (roman[a] <= number) {
-        ans += a;
-        number -= roman[a];
+  let result = "";
+  while (arabicNumber > 0) {
+    let a: keyof typeof romanNumerals;
+    for (a in romanNumerals) {
+      if (romanNumerals[a] <= arabicNumber) {
+        result += a;
+        arabicNumber -= romanNumerals[a];
         break;
       }
     }
   }
-  return ans;
+  return result;
 }

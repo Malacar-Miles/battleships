@@ -4,6 +4,8 @@
 
 body {
   padding: 1em;
-  background: linear-gradient(90deg, rgb(0, 215, 206) 13%, rgb(0, 132, 255) 98%);
-  font-size: 18px;
+  color: #eeeeee;
+  background-color: #181818;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif
 }
