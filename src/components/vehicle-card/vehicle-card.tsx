@@ -5,7 +5,8 @@ import { romanize } from "../../utils/helper-functions";
 const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
   const vehicleCardStyle = {
     backgroundImage: `url("${vehicle.nation?.icons?.large}")`,
-    backgroundSize: "cover",
+    backgroundSize: "92%",
+    backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
   };
 
