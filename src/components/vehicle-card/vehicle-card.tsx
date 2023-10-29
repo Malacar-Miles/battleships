@@ -2,7 +2,13 @@ import "./vehicle-card.scss";
 import { type Vehicle } from "../../utils/filter-logic";
 import { romanize } from "../../utils/helper-functions";
 
-const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
+const VehicleCard = ({
+  vehicle,
+  setVehicleToShowInLightbox,
+}: {
+  vehicle: Vehicle;
+  setVehicleToShowInLightbox: (vehicle: Vehicle | null) => void;
+}) => {
   const vehicleCardStyle = {
     backgroundImage: `url("${vehicle.nation?.icons?.large}")`,
     backgroundSize: "92%",
@@ -10,8 +16,16 @@ const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
     backgroundPosition: "center",
   };
 
+  const handleClick = () => {
+    setVehicleToShowInLightbox(vehicle);
+  };
+
   return (
-    <article className="vehicle-card" style={vehicleCardStyle}>
+    <article
+      className="vehicle-card"
+      style={vehicleCardStyle}
+      onClick={handleClick}
+    >
       <img className="vehicle-icon" alt="" src={vehicle.icons?.medium} />
       <div className="type-and-level">
         <img

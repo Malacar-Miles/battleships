@@ -65,6 +65,9 @@ export const getFilterTemplateData = (vehicles: Vehicle[]) => {
   });
 
   result.allLevels.sort((a, b) => a - b);
-  
+
   return result;
 };
+
+export const sortVehiclesByTitle = (vehicles: Vehicle[]) =>
+  [...vehicles].sort((a, b) => (a.title > b.title ? 1 : -1));
