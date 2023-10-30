@@ -17,7 +17,7 @@ Features:
 
 What I'd like to improve if I could spend more time on this project:
 - Implement Redux for state management and store filter data there
-- Implement firtualization for the gallery view
+- Implement virtualization for the gallery view
 - Implement CSCC variables
 - Improve responsive design, especially the filter selectors
 - Implement scrolling for the ship details view, for cases where the description text might not fit the screen
