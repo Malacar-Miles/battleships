@@ -8,9 +8,65 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
 
   .vehicle-details {
-    background-color: white;
-    color: black;
+    padding: 1em;
+    border: 1px solid #2b2b2b;
+    background-color: #1f1f1f;
+    border-radius: 1.5em;
+    width: 90%;
+    max-height: 95vh;
+    overflow: hidden;
+
+    /* Add shadow */
+    box-shadow: 0 0 20px 10px #2b2b2b, /* inner color */ 0 0 30px 20px #1f1f1f,
+      /* middle color */ 0 0 25px 15px #1f1f1f; /* outer color */
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      /* Prevent text selection */
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none; /* Standard syntax */
+
+      .header-field {
+        display: flex;
+        align-items: center;
+        gap: 0.3em;
+      }
+
+      .icon {
+        height: 1.2em;
+      }
+
+      .close-button {
+        color: #2b2b2b;
+        background-color: #eeeeee;
+        border-radius: 5px;
+        width: 2em;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+
+    .vehicle-image {
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+      max-width: 90%;
+    }
+
+    .description {
+      display: block;
+    }
   }
 }

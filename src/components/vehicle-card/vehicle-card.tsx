@@ -1,14 +1,10 @@
 import "./vehicle-card.scss";
+import { useState } from "react";
 import { type Vehicle } from "../../utils/filter-logic";
 import { romanize } from "../../utils/helper-functions";
+import VehicleDetailsLightbox from "../vehicle-details-lightbox/vehicle-details-lightbox";
 
-const VehicleCard = ({
-  vehicle,
-  setVehicleToShowInLightbox,
-}: {
-  vehicle: Vehicle;
-  setVehicleToShowInLightbox: (vehicle: Vehicle | null) => void;
-}) => {
+const VehicleCard = ({ vehicle }: { vehicle: Vehicle }) => {
   const vehicleCardStyle = {
     backgroundImage: `url("${vehicle.nation?.icons?.large}")`,
     backgroundSize: "92%",
@@ -16,8 +12,9 @@ const VehicleCard = ({
     backgroundPosition: "center",
   };
 
+  const [showDetails, setShowDetails] = useState(false);
   const handleClick = () => {
-    setVehicleToShowInLightbox(vehicle);
+    setShowDetails(true);
   };
 
   return (
@@ -26,6 +23,12 @@ const VehicleCard = ({
       style={vehicleCardStyle}
       onClick={handleClick}
     >
+      {showDetails && (
+        <VehicleDetailsLightbox
+          vehicle={vehicle}
+          setShowDetails={setShowDetails}
+        />
+      )}
       <img className="vehicle-icon" alt="" src={vehicle.icons?.medium} />
       <div className="type-and-level">
         <img
