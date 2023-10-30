@@ -5,4 +5,24 @@
   gap: 1em;
   max-width: 1024px;
   margin: 0 auto;
+
+  .vehicle-grid {
+    width: 100%;
+    display: grid;
+    grid-gap: 1em;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    @media only screen and (max-width: 875px) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 660px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media only screen and (max-width: 438px) {
+      grid-template-columns: 1fr;
+    }
+  }
 }

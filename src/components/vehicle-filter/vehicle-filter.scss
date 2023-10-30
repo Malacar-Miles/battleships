@@ -6,4 +6,10 @@
   align-items: center;
   padding: 0.8em;
   gap: 1em;
+
+  @media only screen and (max-width: 510px) {
+    flex-direction: column;
+    gap: 0.4em;
+    padding: 0;
+  }
 }

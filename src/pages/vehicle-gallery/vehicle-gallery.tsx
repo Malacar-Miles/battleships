@@ -19,13 +19,14 @@ const VehicleGallery = () => {
   const VehicleGalleryContent = () => {
     if (loading)
       return <span className="loading-message">Loading data...</span>;
-    else if (error)
+    else if (error) {
+      console.log(error);
       return (
         <span className="error-message">
           Error loading data: {error.message}
         </span>
       );
-    else {
+    } else {
       const allVehicles = data?.vehicles as Vehicle[];
       const filterTemplateData = getFilterTemplateData(allVehicles);
       const filteredVehicles = filterVehicles(allVehicles, filter);
@@ -37,10 +38,12 @@ const VehicleGallery = () => {
             setFilter={setFilter}
             filterTemplateData={filterTemplateData}
           />
+          <div className="vehicle-grid">
           {sortedVehicles.map(
             (vehicle, index) =>
               vehicle && <VehicleCard key={index} vehicle={vehicle} />
           )}
+          </div>
         </>
       );
     }
