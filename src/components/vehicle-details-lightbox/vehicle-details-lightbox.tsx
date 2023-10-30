@@ -19,10 +19,7 @@ const VehicleDetailsLightbox = ({
   };
 
   return (
-    <div
-      className="vehicle-details-lightbox"
-      onClick={handleLightboxClick}
-    >
+    <div className="vehicle-details-lightbox" onClick={handleLightboxClick}>
       <div className="vehicle-details">
         <div className="header">
           <span className="header-field">{vehicle.title}</span>
@@ -39,11 +36,7 @@ const VehicleDetailsLightbox = ({
             X
           </button>
         </div>
-        <img
-          className="vehicle-image"
-          alt={`${vehicle.title} image`}
-          src={vehicle.icons?.large}
-        />
+        <img className="vehicle-image" alt="" src={vehicle.icons?.large} />
         <span className="description">{vehicle.description}</span>
       </div>
     </div>

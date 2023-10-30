@@ -28,11 +28,6 @@
       justify-content: space-between;
       align-items: center;
 
-      /* Prevent text selection */
-      -webkit-user-select: none; /* Safari */
-      -ms-user-select: none; /* IE 10 and IE 11 */
-      user-select: none; /* Standard syntax */
-
       .header-field {
         display: flex;
         align-items: center;
@@ -55,6 +50,10 @@
         border: none;
         text-align: center;
         cursor: pointer;
+        /* Prevent text selection */
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
       }
     }
 

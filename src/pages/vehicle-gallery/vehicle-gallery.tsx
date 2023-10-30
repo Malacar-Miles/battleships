@@ -26,7 +26,6 @@ const VehicleGallery = () => {
         </span>
       );
     else {
-      console.log("Rendering Gallery");
       const allVehicles = data?.vehicles as Vehicle[];
       const filterTemplateData = getFilterTemplateData(allVehicles);
       const filteredVehicles = filterVehicles(allVehicles, filter);
